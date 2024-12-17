@@ -34,6 +34,7 @@ p {
   flex-direction: row;
   justify-content: space-between;
   align-items: end;
+  gap: 32px;
 }
 
 .W1 {
