@@ -1,11 +1,21 @@
 body {
   padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .head {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   font-weight: 600;
+  font-size: 1vw;
+  max-width: 96%;
+  min-width: 100%;
+}
+.head span {
+  color: brown;
 }
 .content {
   display: flex;
@@ -15,58 +25,81 @@ body {
 }
 h1 {
   text-align: center;
-  font-size: 136px;
+  font-size: 5vw;
   color: rgb(0, 0, 0);
   margin: 0;
-  margin-top: 116px;
+  margin-top: 20%;
   text-transform: uppercase;
   font-weight: 900;
 }
-
 p {
   text-align: center;
-  font-size: 15px;
-  width: 360px;
+  font-size: 1vw;
+  width: 40%;
 }
-
+.Page1-bottom {
+  position: fixed;
+  bottom: 30px;
+  width: 100%;
+}
 .works {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: end;
-  gap: 32px;
+  gap: 20px;
+  /* gap: clamp(8px, 2vw, 24px); */
+  height: 100%;
+  padding: 0 30px;
 }
-
 .W1 {
-  height: 181px;
-  width: 218px;
+  height: 21vh;
+  width: 17vw;
   background-color: rgb(228, 228, 228);
+  transition: all 0.3s ease; /* 添加平滑过渡 */
 }
 .W2 {
-  height: 165px;
-  width: 154px;
+  height: 31vh;
+  width: 11vw;
   background-color: rgb(228, 228, 228);
+  transition: all 0.3s ease; /* 添加平滑过渡 */
 }
 .W3 {
-  height: 140px;
-  width: 154px;
+  height: 25vh;
+  width: 15vw;
   background-color: rgb(228, 228, 228);
+  transition: all 0.3s ease; /* 添加平滑过渡 */
 }
 .W4 {
-  height: 192px;
-  width: 246px;
+  height: 21vh;
+  width: 19vw;
   background-color: rgb(228, 228, 228);
+  transition: all 0.3s ease; /* 添加平滑过渡 */
 }
 .W5 {
-  height: 222px;
-  width: 139px;
+  height: 33vh;
+  width: 11vw;
   background-color: rgb(228, 228, 228);
+  transition: all 0.3s ease; /* 添加平滑过渡 */
 }
 .W6 {
-  height: 153px;
-  width: 294px;
+  height: 21vh;
+  width: 15vw;
   background-color: rgb(228, 228, 228);
+  transition: all 0.3s ease; /* 添加平滑过渡 */
+}
+/* 作品图片悬停效果 */
+.W1:hover,
+.W2:hover,
+.W3:hover,
+.W4:hover,
+.W5:hover,
+.W6:hover {
+  height: 24vh;
+  width: 22vw;
+  /* background-color: var(--hover-bg-color); */
 }
 .tips {
-  font-size: small;
+  font-size: 1.8vh;
+  padding: 4px 30px;
 }
