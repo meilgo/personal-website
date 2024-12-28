@@ -1,21 +1,51 @@
 body {
-  padding: 30px;
+  padding: 0 30px;
+  padding-top: 2vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+a {
+  text-decoration: none; /* 移除下划线 */
+  color: inherit; /* 继承父元素的颜色 */
+  transition: color 0.3s;
+}
+a:hover {
+  color: #6a6854;
+}
 .head {
+  position: fixed; /* 固定在页面顶端 */
+  top: 0;
+  width: 100%;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  font-weight: 600;
+  align-items: center;
+  font-weight: 900;
   font-size: 1vw;
   max-width: 96%;
-  min-width: 100%;
+  min-width: 96%;
+  z-index: 1000; /* 确保在其他内容之上 */
+  padding: 10px 40px; /* 添加内边距 */
+  background-color: #ffffff00;
+  /* background-color: rgba(255, 255, 255, 0.8);  */
+  backdrop-filter: blur(10px); /* 添加毛玻璃效果 */
+  -webkit-backdrop-filter: blur(10px); /* 兼容 WebKit 浏览器 */
+  /* box-shadow: 0 0.5px 0px rgba(0, 0, 0, 0.1);  */
 }
-.head span {
-  color: brown;
+.HL {
+  flex: 1;
+  text-align: left;
+}
+
+.HC {
+  flex: 1;
+  text-align: center;
+}
+
+.HR {
+  flex: 1;
+  text-align: right;
 }
 .content {
   display: flex;
@@ -23,83 +53,347 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 h1 {
   text-align: center;
-  font-size: 5vw;
+  font-size: 10vw;
   color: rgb(0, 0, 0);
   margin: 0;
   margin-top: 20%;
   text-transform: uppercase;
-  font-weight: 900;
 }
-p {
+h2 {
+  padding-top: 5%;
+}
+.small-print {
   text-align: center;
   font-size: 1vw;
   width: 40%;
+  margin-bottom: 40vh;
 }
+
 .Page1-bottom {
   position: fixed;
-  bottom: 30px;
+  bottom: 0;
   width: 100%;
+  /* background-color: white; */
+  transition: opacity 0.5s;
 }
-.works {
+
+.Page1-bottom.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+.works-pig {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: end;
-  gap: 20px;
+  gap: 5px;
   /* gap: clamp(8px, 2vw, 24px); */
   height: 100%;
   padding: 0 30px;
+  /* flex-wrap: wrap; */
+}
+.works-hidden {
+  display: none;
+  /* margin-top: 5%; */
+}
+@media (max-width: 700px) {
+  .works-pig {
+    display: none;
+  }
+  p {
+    margin-bottom: 40vh;
+  }
+  .head {
+    font-size: 2vw;
+  }
+  .works-hidden {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 100%;
+    height: auto; */
+  }
+  .works-hidden img {
+    width: 90%;
+    height: auto;
+  }
 }
 .W1 {
-  height: 21vh;
-  width: 17vw;
-  background-color: rgb(228, 228, 228);
+  /* padding: 5px 10px; */
+  height: auto;
+  width: 10vw;
+  /* background-color: rgb(228, 228, 228); */
   transition: all 0.3s ease; /* 添加平滑过渡 */
+  /* border: solid rgb(187, 187, 187) 0.5px; */
 }
+
 .W2 {
-  height: 31vh;
-  width: 11vw;
-  background-color: rgb(228, 228, 228);
+  height: auto;
+  width: 8vw;
+  /* background-color: rgb(228, 228, 228); */
   transition: all 0.3s ease; /* 添加平滑过渡 */
+  /* border: solid rgb(187, 187, 187) 0.5px; */
 }
+
 .W3 {
-  height: 25vh;
-  width: 15vw;
-  background-color: rgb(228, 228, 228);
+  height: auto;
+  width: 10vw;
+  /* background-color: rgb(228, 228, 228); */
   transition: all 0.3s ease; /* 添加平滑过渡 */
+  /* border: solid rgb(187, 187, 187) 0.5px; */
 }
+
 .W4 {
-  height: 21vh;
-  width: 19vw;
-  background-color: rgb(228, 228, 228);
+  height: auto;
+  width: 12vw;
+  /* background-color: rgb(228, 228, 228); */
   transition: all 0.3s ease; /* 添加平滑过渡 */
+  /* border: solid rgb(187, 187, 187) 0.5px; */
 }
+
 .W5 {
-  height: 33vh;
-  width: 11vw;
-  background-color: rgb(228, 228, 228);
+  height: auto;
+  width: 5vw;
+  /* background-color: rgb(228, 228, 228); */
   transition: all 0.3s ease; /* 添加平滑过渡 */
+  /* border: solid rgb(187, 187, 187) 0.5px; */
 }
+
 .W6 {
-  height: 21vh;
+  height: auto;
   width: 15vw;
-  background-color: rgb(228, 228, 228);
+  /* background-color: rgb(228, 228, 228); */
   transition: all 0.3s ease; /* 添加平滑过渡 */
+  /* border: solid rgb(187, 187, 187) 0.5px; */
 }
+.W7 {
+  height: auto;
+  width: 16vw;
+  /* background-color: rgb(228, 228, 228); */
+  transition: all 0.3s ease; /* 添加平滑过渡 */
+  /* border: solid rgb(187, 187, 187) 0.5px; */
+}
+.W8 {
+  height: auto;
+  width: 12vw;
+  /* background-color: rgb(228, 228, 228); */
+  transition: all 0.3s ease; /* 添加平滑过渡 */
+  /* border: solid rgb(187, 187, 187) 0.5px; */
+}
+
 /* 作品图片悬停效果 */
-.W1:hover,
-.W2:hover,
-.W3:hover,
-.W4:hover,
-.W5:hover,
+.W1:hover {
+  height: auto;
+  width: 15vw;
+}
+.W2:hover {
+  height: auto;
+  width: 11vw;
+}
+.W3:hover {
+  height: auto;
+  width: 12vw;
+}
+.W4:hover {
+  height: auto;
+  width: 16vw;
+}
+.W5:hover {
+  height: auto;
+  width: 8vw;
+}
 .W6:hover {
-  height: 24vh;
-  width: 22vw;
+  height: auto;
+  width: 18vw;
+}
+.W7:hover {
+  height: auto;
+  width: 18vw;
   /* background-color: var(--hover-bg-color); */
 }
+.W8:hover {
+  height: auto;
+  width: 16vw;
+  /* background-color: var(--hover-bg-color); */
+}
+
 .tips {
   font-size: 1.8vh;
   padding: 4px 30px;
+}
+
+/* .progress-container {
+  width: 10px;
+  height: 100%;
+  background: #f3f3f3;
+  position: fixed;
+  top: 0;
+  right: 0;
+} */
+
+/* .progress-bar {
+  width: 100%;
+  height: 0;
+  background: #4caf50;
+} */
+
+.Stretch-height {
+  width: 100%;
+  height: 1500px;
+  /* background-color: rgb(240, 255, 241); */
+  position: relative;
+  top: 30vh; /* 设置为视窗高度，使其在第一屏的下面 */
+}
+
+.side-nav {
+  width: 10vw;
+  height: auto;
+  position: fixed;
+  top: 50%;
+  right: 2%; /* 设置为视窗宽度的 2% */
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* 右对齐 */
+  gap: 17px; /* 小横条间隔 20px */
+  transition: right 0.3s ease-out, opacity 0.8s ease-out; /* 添加动画曲线 */
+}
+
+.side-nav.visible {
+  right: 2%; /* 设置为视窗宽度的 2% */
+  opacity: 1;
+}
+
+.side-nav.hidden {
+  right: -100px; /* 隐藏时移出视窗 */
+  opacity: 0;
+  visibility: hidden;
+  width: 10vw;
+}
+.nav-item {
+  height: 2px; /* 高度 */
+  background-color: #c8c3c3; /* 初始颜色 */
+  position: relative;
+  cursor: pointer;
+  transition: width 0.3s, margin 0.3s, background-color 0.3s;
+  transform-origin: right; /* 设置变换原点为右边 */
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+  font-size: 1vw;
+  font-weight: 600;
+}
+.nav-item:nth-child(1) {
+  width: 34px; /* 初始宽度 */
+  animation-delay: 0.1s;
+}
+
+.nav-item:nth-child(2) {
+  width: 30px; /* 初始宽度 */
+  animation-delay: 0.2s;
+}
+
+.nav-item:nth-child(3) {
+  width: 35px; /* 初始宽度 */
+  animation-delay: 0.3s;
+}
+
+.nav-item:nth-child(4) {
+  width: 32px; /* 初始宽度 */
+  animation-delay: 0.4s;
+}
+
+.nav-item:nth-child(5) {
+  width: 30px; /* 初始宽度 */
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.nav-item:hover {
+  width: 60px; /* 悬停时宽度 */
+  margin-top: 20px; /* 悬停时上外边距 */
+  margin-bottom: 20px; /* 悬停时下外边距 */ /* 悬停时颜色变成深灰色 */
+}
+
+.nav-item::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 50%;
+  bottom: 100%; /* 初始位置在小横条的上边缘 */
+  transform: translateX(-50%);
+  background-color: transparent; /* 移除背景颜色 */
+  padding: 5px 10px;
+  border: none; /* 移除边框 */
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s, bottom 0.3s;
+}
+
+.nav-item:hover::after {
+  opacity: 1;
+  bottom: 120%; /* 悬停时从上往上出现 */
+}
+/* 吸尘器 */
+.vacuum {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.vacuum img {
+  width: 100%;
+  height: auto;
+}
+/* 堆肥设备 */
+.Product-2-Introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.compost {
+  width: 90%;
+  height: auto;
+  margin-bottom: 10%;
+}
+.interpretation {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  font-size: 1.4vw;
+  gap: 7%;
+}
+.compost-video {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  gap: 7%;
+}
+.question {
+  width: 100%;
+  height: 100%;
+  /* flex: 1; */
+}
+.compost-video video {
+  width: 50%;
+  height: 50%;
+  flex: 1;
+}
+.video2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.video2 video {
+  width: 75%;
+  margin-bottom: 10%;
 }
