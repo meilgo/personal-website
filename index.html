@@ -87,77 +87,145 @@
         </div>
         <div class="work4">
             <h2 id="motorcycle">画廊</h2>
+            <div class="sketch">
+                <div class="grid-item item-1">
+                    <h3>速写</h3>
+                    <span>399铅笔</span>
+                    <span>马克笔</span>
+                    <span>数位板</span>
+                    <span>Photoshop</span>
+                </div>
+                <div class="grid-item item-2"><img src="画廊图片\速写 (7).png" alt="橙色水杯"></div>
+                <div class="grid-item item-3"><img src="画廊图片\速写 (8).png" alt="车的一部分"></div>
+                <div class="grid-item item-4"><img src="画廊图片\速写 (4).png" alt="椅子"></div>
+                <div class="grid-item item-5"><img src="画廊图片\速写 (1).png" alt="绝命毒师"></div>
+                <div class="grid-item item-6"></div>
+                <div class="grid-item item-7"><img src="画廊图片\速写 (5).png" alt="帽子"></div>
+                <div class="grid-item item-8"><img src="画廊图片\速写 (2).png" alt="飞机"></div>
+                <div class="grid-item item-9"><img src="画廊图片\速写 (6).png" alt="绿色水杯"></div>
+                <div class="grid-item item-10"><img src="画廊图片\速写 (3).png" alt="忧郁男"></div>
+            </div>
+            <div class="illustration">
+                <div class="grid-item item-1 grid2-item1">
+                    <h3>插画</h3>
+                    <span>illustrator</span>
+                </div>
+                <div class="grid2-item "><img src="画廊图片\插画 (1).png" alt="橙色水杯"></div>
+                <div class="grid2-item "><img src="画廊图片\插画 (2).png" alt="车的一部分"></div>
+                <div class="grid2-item "></div>
+                <div class="grid2-item grid2-item5"></div>
+                <div class="grid2-item "></div>
+                <div class="grid2-item "><img src="画廊图片\插画 (3).png" alt="帽子"></div>
+                <div class="grid2-item "><img src="画廊图片\插画 (4).png" alt="飞机"></div>
+            </div>
+            <div class="render">
+                <div class="grid-item item-1 grid2-item1 grid3-item1">
+                    <h3>3D渲染</h3>
+                    <span>Rhino</span>
+                    <span>Keyshot</span>
+                    <span>Blander</span>
+                </div>
+                <div class="grid3-item "><img src="画廊图片\渲染1 (2).png" alt=""></div>
+                <div class="grid3-item "></div>
+                <div class="grid3-item "></div>
+                <div class="grid3-item grid3-item5"><img src="画廊图片\渲染1 (3).png" alt=""></div>
+                <div class="grid3-item grid3-item6"></div>
+                <div class="grid3-item grid3-item7"></div>
+                <div class="grid3-item grid3-item8"><img src="画廊图片\渲染1 (4).png" alt=""></div>
+                <div class="grid3-item grid3-item9"><img src="画廊图片\渲染1 (1).png" alt=""></div>
+            </div>
+            <div class="render2">
+                <div class="grid4-item item-1">
+                </div>
+                <div class="grid4-item grid4-item2"></div>
+                <div class="grid4-item grid4-item3"></div>
+                <div class="grid4-item grid4-item4"><img src="画廊图片\渲染2 (1).png" alt="椅子"></div>
+                <div class="grid4-item grid4-item5"><img src="画廊图片\渲染2 (6).png" alt="绝命毒师"></div>
+                <div class="grid4-item grid4-item6"></div>
+                <div class="grid4-item grid4-item7"><img src="画廊图片\渲染2 (5).png" alt="帽子"></div>
+                <div class="grid4-item grid4-item8"><img src="画廊图片\渲染2 (2).png" alt="飞机"></div>
+                <div class="grid4-item grid4-item9"><img src="画廊图片\渲染2 (4).png" alt="绿色水杯"></div>
+                <div class="grid4-item grid4-item10"><img src="画廊图片\渲染2 (3).png" alt="忧郁男"></div>
+            </div>
+            <img src="画廊图片\渲染3.png" alt="" class="Cattle">
         </div>
-    </div>
-    <div class="side-nav hidden">
-        <div class="nav-item" data-text="回到上面" data-target="#top"></div>
-        <div class="nav-item" data-text="吸尘器" data-target="#vacuum"></div>
-        <div class="nav-item" data-text="堆肥设备" data-target="#compost"></div>
-        <div class="nav-item" data-text="登山杖" data-target="#trekking"></div>
-        <div class="nav-item" data-text="画廊" data-target="#motorcycle"></div>
-    </div>
-    <script>
-        window.onscroll = function () {
-            togglePage1Bottom();
-            toggleSideNav();
-            highlightNavItem();
-        };
+        <div class="ps">
+            <div class="ps-render">
+                <h3>PS渲染</h3>
+                <span>数位板</span>
+                <span>Photoshop</span>
+            </div>
+            <img src="画廊图片\PS渲染.png" alt="">
+        </div>
+        <div class="side-nav hidden">
+            <div class="nav-item" data-text="回到上面" data-target="#top"></div>
+            <div class="nav-item" data-text="吸尘器" data-target="#vacuum"></div>
+            <div class="nav-item" data-text="堆肥设备" data-target="#compost"></div>
+            <div class="nav-item" data-text="登山杖" data-target="#trekking"></div>
+            <div class="nav-item" data-text="画廊" data-target="#motorcycle"></div>
+        </div>
+        <script>
+            window.onscroll = function () {
+                togglePage1Bottom();
+                toggleSideNav();
+                highlightNavItem();
+            };
 
-        function togglePage1Bottom() {
-            var page1Bottom = document.getElementById("page1Bottom");
-            if (document.documentElement.scrollTop > window.innerHeight * 0.2) {
-                page1Bottom.classList.add("hidden");
-            } else {
-                page1Bottom.classList.remove("hidden");
-            }
-        }
-
-        function toggleSideNav() {
-            var sideNav = document.querySelector(".side-nav");
-            if (document.documentElement.scrollTop > window.innerHeight * 0.2) {
-                sideNav.classList.remove("hidden");
-                sideNav.classList.add("visible");
-                document.querySelectorAll('.nav-item').forEach((item, index) => {
-                    item.style.animationDelay = `${index * 0.1}s`;
-                    item.classList.add('fadeIn');
-                });
-            } else {
-                sideNav.classList.remove("visible");
-                sideNav.classList.add("hidden");
-                document.querySelectorAll('.nav-item').forEach(item => {
-                    item.classList.remove('fadeIn');
-                });
-            }
-        }
-
-        function highlightNavItem() {
-            var sections = document.querySelectorAll('h2');
-            var navItems = document.querySelectorAll('.nav-item');
-            var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
-
-            sections.forEach((section, index) => {
-                var sectionTop = section.offsetTop;
-                var sectionHeight = section.offsetHeight;
-
-                if (scrollPosition >= sectionTop - sectionHeight / 2 && scrollPosition < sectionTop + sectionHeight / 2) {
-                    navItems[index + 1].style.backgroundColor = 'black'; // 对应位置变成深黑色
+            function togglePage1Bottom() {
+                var page1Bottom = document.getElementById("page1Bottom");
+                if (document.documentElement.scrollTop > window.innerHeight * 0.2) {
+                    page1Bottom.classList.add("hidden");
                 } else {
-                    navItems[index + 1].style.backgroundColor = '#c8c3c3'; // 恢复默认颜色
+                    page1Bottom.classList.remove("hidden");
                 }
-            });
-        }
+            }
 
-        document.querySelectorAll('.nav-item').forEach(item => {
-            item.addEventListener('click', function () {
-                var target = this.getAttribute('data-target');
-                if (target === '#top') {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
+            function toggleSideNav() {
+                var sideNav = document.querySelector(".side-nav");
+                if (document.documentElement.scrollTop > window.innerHeight * 0.2) {
+                    sideNav.classList.remove("hidden");
+                    sideNav.classList.add("visible");
+                    document.querySelectorAll('.nav-item').forEach((item, index) => {
+                        item.style.animationDelay = `${index * 0.1}s`;
+                        item.classList.add('fadeIn');
+                    });
                 } else {
-                    document.querySelector(target).scrollIntoView({ behavior: 'smooth' });
+                    sideNav.classList.remove("visible");
+                    sideNav.classList.add("hidden");
+                    document.querySelectorAll('.nav-item').forEach(item => {
+                        item.classList.remove('fadeIn');
+                    });
                 }
+            }
+
+            function highlightNavItem() {
+                var sections = document.querySelectorAll('h2');
+                var navItems = document.querySelectorAll('.nav-item');
+                var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+
+                sections.forEach((section, index) => {
+                    var sectionTop = section.offsetTop;
+                    var sectionHeight = section.offsetHeight;
+
+                    if (scrollPosition >= sectionTop - sectionHeight / 2 && scrollPosition < sectionTop + sectionHeight / 2) {
+                        navItems[index + 1].style.backgroundColor = 'black'; // 对应位置变成深黑色
+                    } else {
+                        navItems[index + 1].style.backgroundColor = '#c8c3c3'; // 恢复默认颜色
+                    }
+                });
+            }
+
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.addEventListener('click', function () {
+                    var target = this.getAttribute('data-target');
+                    if (target === '#top') {
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    } else {
+                        document.querySelector(target).scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
             });
-        });
-    </script>
+        </script>
 </body>
 
 </html>

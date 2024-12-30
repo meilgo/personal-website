@@ -5,6 +5,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transform-origin: center;
 }
 a {
   text-decoration: none; /* 移除下划线 */
@@ -52,6 +53,7 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transform-origin: center;
 }
 
 h1 {
@@ -79,7 +81,9 @@ h2 {
   /* background-color: white; */
   transition: opacity 0.5s;
 }
-
+.works {
+  transform-origin: center;
+}
 .Page1-bottom.hidden {
   opacity: 0;
   visibility: hidden;
@@ -246,6 +250,7 @@ h2 {
   /* background-color: rgb(240, 255, 241); */
   position: relative;
   top: 30vh; /* 设置为视窗高度，使其在第一屏的下面 */
+  transform-origin: center;
 }
 
 .side-nav {
@@ -265,6 +270,7 @@ h2 {
 .side-nav.visible {
   right: 2%; /* 设置为视窗宽度的 2% */
   opacity: 1;
+  z-index: 50;
 }
 
 .side-nav.hidden {
@@ -346,10 +352,12 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transform-origin: center;
 }
 .vacuum img {
   width: 100%;
   height: auto;
+  transform-origin: center;
 }
 /* 堆肥设备 */
 .Product-2-Introduction {
@@ -357,11 +365,13 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transform-origin: center;
 }
 .compost {
   width: 90%;
   height: auto;
   margin-bottom: 10%;
+  transform-origin: center;
 }
 .interpretation {
   display: flex;
@@ -371,6 +381,7 @@ h2 {
   align-items: center;
   font-size: 1.4vw;
   gap: 7%;
+  transform-origin: center;
 }
 .compost-video {
   width: 90%;
@@ -383,17 +394,241 @@ h2 {
   height: 100%;
   /* flex: 1; */
 }
-.compost-video video {
+.compost-video iframe {
   width: 50%;
-  height: 50%;
-  flex: 1;
+  height: auto;
+  /* flex: 1; */
 }
 .video2 {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.video2 video {
-  width: 75%;
+.video2 iframe {
+  width: 70vw;
+  height: 80vh;
   margin-bottom: 10%;
+}
+
+.sketch {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  width: 100%;
+  height: auto;
+  margin-top: 10%;
+  margin-bottom: 15%;
+  /* gap: 10px; */
+}
+
+.grid-item {
+  /* background-color: #f0f0f0; */
+  text-align: center;
+  /* margin: -3vh -1vw; */
+  /* border: 1px solid #ccc; */
+  height: 30vh;
+  width: 5vw;
+}
+.item-1,
+.item-6 {
+  margin-right: 5vw;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1%;
+  font-weight: 100;
+  margin-top: -10%;
+}
+.item-1 span {
+  font-size: 1vw;
+}
+.grid-item img {
+  width: 15vw;
+  height: auto;
+}
+.item-2 {
+  margin-bottom: 15%;
+  margin-top: 5%;
+  z-index: 100;
+}
+.item-2 img {
+  width: 16vw;
+}
+.item-3 {
+  margin-right: 5vw;
+  margin-left: -5vw;
+  margin-bottom: 5vw;
+  z-index: 2;
+}
+.item-3 img {
+  width: 28vw;
+  height: auto;
+  z-index: 51;
+}
+.item-4 {
+  margin-left: 6vw;
+  margin-top: 1vw;
+}
+.item-4 img {
+  width: 18vw;
+  height: auto;
+}
+.item-5 img {
+  width: 13vw;
+  height: auto;
+}
+.item-7 {
+  z-index: 1;
+  margin-top: -0.5vw;
+}
+.item-7 img {
+  width: 17vw;
+  height: auto;
+}
+.item-8 {
+  margin-right: 3vw;
+  margin-left: -5vw;
+  margin-top: -1vw;
+  z-index: 1;
+}
+.item-8 img {
+  width: 35vw;
+  height: auto;
+  margin-right: 5vw;
+}
+.item-9 {
+  /* margin-right: 5vw; */
+  /* margin-left: -5vw; */
+  margin-top: -4vw;
+  z-index: 10;
+}
+.item-9 img {
+  width: 13vw;
+  height: auto;
+  margin-right: 5vw;
+}
+.item-10 {
+  /* margin-right: 5vw; */
+  margin-left: -5vw;
+  margin-top: -1vw;
+  z-index: 50;
+}
+.item-10 img {
+  width: 14vw;
+  height: auto;
+  margin-right: 5vw;
+}
+.grid-item:hover {
+  z-index: 1000;
+  /* position: relative;  */
+}
+.illustration {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  height: auto;
+  margin-top: 10%;
+  margin-bottom: 15%;
+  /* margin-right: 50%; */
+  gap: 1px;
+}
+.grid2-item {
+  margin: 0 2px;
+  transform: translateX(-20%);
+}
+.grid2-item img {
+  width: 100%;
+  height: auto;
+}
+.render {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  height: auto;
+  margin-top: 0%;
+  margin-bottom: 15%;
+  /* margin-right: 50%; */
+  gap: 1px;
+  align-items: end;
+}
+.grid3-item {
+  transform: translateX(-21%);
+}
+.grid3-item1 {
+  /* color: #6a6854; */
+  margin-top: -10%;
+  width: 100%;
+}
+.grid3-item img {
+  width: 23vw;
+  height: auto;
+}
+.grid3-item9 {
+  margin-left: 6%;
+  margin-top: -50%;
+}
+.grid3-item9 img {
+  width: 44.5vw;
+  height: auto;
+}
+.render2 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  width: 100%;
+  height: auto;
+  margin-top: -10%;
+  /* margin-bottom: 15%; */
+  align-items: end;
+  gap: 10px;
+}
+.grid4-item {
+  transform: translateX(5%);
+}
+.grid4-item img {
+  width: 18vw;
+  height: auto;
+}
+.grid4-item8,
+.grid4-item8 img {
+  margin-left: -18%;
+}
+.grid4-item4 img {
+  margin-bottom: -80%;
+  margin-left: -30%;
+}
+.grid4-item5 img {
+  margin-bottom: -88%;
+  margin-left: -30%;
+}
+
+.grid4-item4 img,
+.grid4-item5 img,
+.grid4-item9 img,
+.grid4-item10 img {
+  margin-left: -40%;
+}
+.Cattle {
+  width: 67.5vw;
+  height: auto;
+  display: block;
+  margin-left: 20.6%;
+  margin-top: 1%;
+}
+.ps-render {
+  margin-right: 5vw;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1%;
+  font-weight: 100;
+  margin-top: 10%;
+}
+.ps-render span {
+  font-size: 1vw;
+}
+.ps img {
+  width: 70vw;
+  height: auto;
+  display: block;
+  margin-left: 19%;
+  margin-top: -7%;
 }
