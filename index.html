@@ -101,13 +101,13 @@
                 <div class="grid-item item-5"><img src="画廊图片\速写 (1).png" alt="绝命毒师"></div>
                 <div class="grid-item item-6"></div>
                 <div class="grid-item item-7"><img src="画廊图片\速写 (5).png" alt="帽子"></div>
-                <div class="grid-item item-8"><img src="画廊图片\速写 (2).png" alt="飞机"></div>
+                <div class="grid-item item-8" id="item-8"><img src="画廊图片\速写 (2).png" alt="飞机"></div>
                 <div class="grid-item item-9"><img src="画廊图片\速写 (6).png" alt="绿色水杯"></div>
                 <div class="grid-item item-10"><img src="画廊图片\速写 (3).png" alt="忧郁男"></div>
             </div>
             <div class="illustration">
                 <div class="grid-item item-1 grid2-item1">
-                    <h3>插画</h3>
+                    <h3 id="illustration">插画</h3>
                     <span>illustrator</span>
                 </div>
                 <div class="grid2-item "><img src="画廊图片\插画 (1).png" alt="橙色水杯"></div>
@@ -132,7 +132,7 @@
                 <div class="grid3-item grid3-item6"></div>
                 <div class="grid3-item grid3-item7"></div>
                 <div class="grid3-item grid3-item8"><img src="画廊图片\渲染1 (4).png" alt=""></div>
-                <div class="grid3-item grid3-item9"><img src="画廊图片\渲染1 (1).png" alt=""></div>
+                <div class="grid3-item grid3-item9" id="grid3-item9"><img src="画廊图片\渲染1 (1).png" alt=""></div>
             </div>
             <div class="render2">
                 <div class="grid4-item item-1">
@@ -142,10 +142,10 @@
                 <div class="grid4-item grid4-item4"><img src="画廊图片\渲染2 (1).png" alt="椅子"></div>
                 <div class="grid4-item grid4-item5"><img src="画廊图片\渲染2 (6).png" alt="绝命毒师"></div>
                 <div class="grid4-item grid4-item6"></div>
-                <div class="grid4-item grid4-item7"><img src="画廊图片\渲染2 (5).png" alt="帽子"></div>
+                <div class="grid4-item grid4-item7" id="grid4-item7"><img src="画廊图片\渲染2 (5).png" alt="帽子"></div>
                 <div class="grid4-item grid4-item8"><img src="画廊图片\渲染2 (2).png" alt="飞机"></div>
                 <div class="grid4-item grid4-item9"><img src="画廊图片\渲染2 (4).png" alt="绿色水杯"></div>
-                <div class="grid4-item grid4-item10"><img src="画廊图片\渲染2 (3).png" alt="忧郁男"></div>
+                <div class="grid4-item grid4-item10" id="grid4-item10"><img src="画廊图片\渲染2 (3).png" alt="忧郁男"></div>
             </div>
             <img src="画廊图片\渲染3.png" alt="" class="Cattle">
         </div>
@@ -224,6 +224,21 @@
                         document.querySelector(target).scrollIntoView({ behavior: 'smooth' });
                     }
                 });
+            });
+            // 简图跳转
+            document.addEventListener('DOMContentLoaded', function () {
+                const scrollToElement = (selector) => {
+                    document.querySelector(selector).scrollIntoView({ behavior: 'smooth' });
+                };
+
+                document.querySelector('.W1').addEventListener('click', () => scrollToElement('#compost'));
+                document.querySelector('.W2').addEventListener('click', () => scrollToElement('#grid4-item7'));
+                document.querySelector('.W3').addEventListener('click', () => scrollToElement('#grid4-item10'));
+                document.querySelector('.W4').addEventListener('click', () => scrollToElement('#grid3-item9'));
+                document.querySelector('.W5').addEventListener('click', () => scrollToElement('#trekking'));
+                document.querySelector('.W6').addEventListener('click', () => scrollToElement('#vacuum'));
+                document.querySelector('.W7').addEventListener('click', () => scrollToElement('#illustration'));
+                document.querySelector('.W8').addEventListener('click', () => scrollToElement('#item-8'));
             });
         </script>
 </body>
