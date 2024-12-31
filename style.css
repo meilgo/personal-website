@@ -6,6 +6,8 @@ body {
   justify-content: center;
   align-items: center;
   transform-origin: center;
+  font-family: "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 a {
   text-decoration: none; /* 移除下划线 */
@@ -610,7 +612,7 @@ h2 {
   width: 67.5vw;
   height: auto;
   display: block;
-  margin-left: 20.6%;
+  margin-left: 21.2%;
   margin-top: 1%;
 }
 .ps-render {
@@ -629,6 +631,47 @@ h2 {
   width: 70vw;
   height: auto;
   display: block;
-  margin-left: 19%;
+  margin-left: 20%;
   margin-top: -7%;
+}
+/* 浮层 */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: flex-end;
+  align-items: flex-start;
+  z-index: 2000;
+}
+
+.overlay.active {
+  display: flex;
+}
+.overlay-content {
+  background: white;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  animation: slideDown 0.3s ease;
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.blur {
+  filter: blur(5px);
+  pointer-events: none;
+}
+.HR:hover {
+  color: #6a6854;
+  cursor: pointer;
 }
