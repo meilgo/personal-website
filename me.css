@@ -22,7 +22,7 @@ a:hover {
   justify-content: space-between;
   align-items: center;
   font-weight: 900;
-  font-size: 1vw;
+  font-size: 1.1vw;
   max-width: 96%;
   min-width: 96%;
   z-index: 1000; /* 确保在其他内容之上 */
@@ -101,4 +101,80 @@ h2 {
   margin: 0;
   text-align: end;
   color: rgb(203, 203, 203);
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: flex-end;
+  align-items: flex-start;
+  z-index: 2000;
+}
+
+.overlay.active {
+  display: flex;
+}
+.overlay-content {
+  width: 14vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-start; */
+  align-items: right;
+  background: white;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  animation: slideDown 0.3s ease;
+  border-radius: 3px;
+  gap: 5%;
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+.overlay-content p,
+button {
+  font-size: 1vw;
+  margin: 0;
+  padding: 0;
+}
+.overlay-content h2 {
+  margin-top: 5%;
+  margin-bottom: 10%;
+}
+.blur {
+  filter: blur(5px);
+  pointer-events: none;
+}
+.HR:hover {
+  color: #6a6854;
+  cursor: pointer;
+}
+.overlay img {
+  width: 14vw;
+  height: auto;
+  align-self: center;
+}
+#close-overlay {
+  border: 0.5px solid #6a6854;
+  background-color: #ff000000;
+  border-radius: 2px;
+  margin-top: 7%;
 }

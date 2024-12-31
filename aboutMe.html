@@ -14,10 +14,10 @@
         <div class="HL">
             <a href="index.html">作品</a>
             <!-- <span>作品</span> -->
-            <span>画廊</span>
+            <a href="index.html#motorcycle">画廊</a>
         </div>
-        <span class="HC">HomePage</span>
-        <span class="HR">联系</span>
+        <!-- <span class="HC">HomePage</span> -->
+        <span class="HR" id="contact">联系</span>
     </div>
     <div class="content">
         <div class="left">
@@ -34,12 +34,59 @@
             <div class="text">
                 <p class="tag"><del>文艺青年</del> | 摇滚乐爱好者 | 故作深沉 | 沉迷游戏 | <del>二次元</del> | 果粉 | <del>完美主义者</del> | 理想主义者
                 </p>
-                <p class="FW">假装文艺: 医学、法律、商业、工程，这些都是崇高的追求，足以支撑人的一生；但诗歌，浪漫，爱，是我们生而为人的原因。</p>
+                <p class="FW">医学、法律、商业、工程，这些都是崇高的追求，足以支撑人的一生；但诗歌，浪漫，爱，是我们生而为人的原因。</p>
                 <img src="图片素材\填充用.jpg" alt="fill" class="fill">
                 <p class="tips">此图片和文案只是为了填补空白的页面</p>
             </div>
         </div>
     </div>
+    <div id="overlay" class="overlay">
+        <div class="overlay-content">
+            <img src="WeChat.png" alt="">
+            <h2>联系</h2>
+            <p>电话: 15717721062</p>
+            <p>邮箱: ddmielgo@gmail.com</p>
+
+            <button id="close-overlay">关闭</button>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const contactButton = document.getElementById('contact');
+            const overlay = document.getElementById('overlay');
+            const closeOverlayButton = document.getElementById('close-overlay');
+            const content = document.querySelector('.content');
+            const page1Bottom = document.getElementById('page1Bottom');
+
+            contactButton.addEventListener('click', function () {
+                overlay.classList.add('active');
+                content.classList.add('blur');
+                page1Bottom.classList.add('blur');
+            });
+
+            closeOverlayButton.addEventListener('click', function () {
+                overlay.querySelector('.overlay-content').style.animation = 'slideUp 0.3s ease';
+                setTimeout(() => {
+                    overlay.classList.remove('active');
+                    content.classList.remove('blur');
+                    page1Bottom.classList.remove('blur');
+                    overlay.querySelector('.overlay-content').style.animation = 'slideDown 0.3s ease';
+                }, 300);
+            });
+
+            overlay.addEventListener('click', function (event) {
+                if (event.target === overlay) {
+                    overlay.querySelector('.overlay-content').style.animation = 'slideUp 0.3s ease';
+                    setTimeout(() => {
+                        overlay.classList.remove('active');
+                        content.classList.remove('blur');
+                        page1Bottom.classList.remove('blur');
+                        overlay.querySelector('.overlay-content').style.animation = 'slideDown 0.3s ease';
+                    }, 300);
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
