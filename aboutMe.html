@@ -15,6 +15,7 @@
             <a href="index.html">作品</a>
             <!-- <span>作品</span> -->
             <a href="index.html#motorcycle">画廊</a>
+            <a href="blogList.html">博客</a>
         </div>
         <!-- <span class="HC">HomePage</span> -->
         <span class="HR" id="contact">联系</span>
@@ -49,33 +50,21 @@
 
             <button id="close-overlay">关闭</button>
         </div>
-    </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const contactButton = document.getElementById('contact');
-            const overlay = document.getElementById('overlay');
-            const closeOverlayButton = document.getElementById('close-overlay');
-            const content = document.querySelector('.content');
-            const page1Bottom = document.getElementById('page1Bottom');
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const contactButton = document.getElementById('contact');
+                const overlay = document.getElementById('overlay');
+                const closeOverlayButton = document.getElementById('close-overlay');
+                const content = document.querySelector('.content');
+                const page1Bottom = document.getElementById('page1Bottom');
 
-            contactButton.addEventListener('click', function () {
-                overlay.classList.add('active');
-                content.classList.add('blur');
-                page1Bottom.classList.add('blur');
-            });
+                contactButton.addEventListener('click', function () {
+                    overlay.classList.add('active');
+                    content.classList.add('blur');
+                    page1Bottom.classList.add('blur');
+                });
 
-            closeOverlayButton.addEventListener('click', function () {
-                overlay.querySelector('.overlay-content').style.animation = 'slideUp 0.3s ease';
-                setTimeout(() => {
-                    overlay.classList.remove('active');
-                    content.classList.remove('blur');
-                    page1Bottom.classList.remove('blur');
-                    overlay.querySelector('.overlay-content').style.animation = 'slideDown 0.3s ease';
-                }, 300);
-            });
-
-            overlay.addEventListener('click', function (event) {
-                if (event.target === overlay) {
+                closeOverlayButton.addEventListener('click', function () {
                     overlay.querySelector('.overlay-content').style.animation = 'slideUp 0.3s ease';
                     setTimeout(() => {
                         overlay.classList.remove('active');
@@ -83,10 +72,21 @@
                         page1Bottom.classList.remove('blur');
                         overlay.querySelector('.overlay-content').style.animation = 'slideDown 0.3s ease';
                     }, 300);
-                }
+                });
+
+                overlay.addEventListener('click', function (event) {
+                    if (event.target === overlay) {
+                        overlay.querySelector('.overlay-content').style.animation = 'slideUp 0.3s ease';
+                        setTimeout(() => {
+                            overlay.classList.remove('active');
+                            content.classList.remove('blur');
+                            page1Bottom.classList.remove('blur');
+                            overlay.querySelector('.overlay-content').style.animation = 'slideDown 0.3s ease';
+                        }, 300);
+                    }
+                });
             });
-        });
-    </script>
+        </script>
 </body>
 
 </html>
