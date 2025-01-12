@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="blogList.css">
+    <link rel="stylesheet" href="normalize.css">
+    </link>
+</head>
+
+<body>
+    <div class="head">
+        <div class="HL">
+            <a href="aboutMe.html">关于</a>
+            <!-- <span>作品</span> -->
+            <a href="index.html#motorcycle">画廊</a>
+            <a href="blogList.html">博客</a>
+        </div>
+        <!-- <span class="HC">HomePage</span> -->
+        <span class="HR" id="contact">联系</span>
+    </div>
+    <div class="content">
+        <div class="wellcome">
+            <h1>👏 欢迎来到我的博客</h1>
+            <p>这里的博文更多的是自己与自己对话，文笔不好，内容冗长，只是为了记录。</p>
+        </div>
+        <div class="articleList">
+            <a href="blog/article1.html" class="article article1">
+                <div class="left">
+                    <img src="image 25.png " alt="">
+                </div>
+                <div class="right">
+                    <div>
+                        <h2>我为什么开始搞前端开发？</h2>
+                        <p class="time">25年1月12日 佛山</p>
+                    </div>
+                    <div>
+                        <p>去年暑假，我为了逃离之前实习的公司，我跟老师撒了个慌，说将来不干设计了，想当程序员。</p>
+                    </div>
+                </div>
+            </a>
+            <hr>
+            <a href="blog/article2.html" class="article article2">
+                <div class="left">
+                    <img src="image 24.png" alt="">
+                </div>
+                <div class="right">
+                    <div>
+                        <h2>大学四年后，我真的能成为一个好的设计师吗？</h2>
+                        <p class="time">25年1月11日 佛山</p>
+                    </div>
+                    <div>
+                        <p>最近在找工作，马上大学毕业，在这个时间点回忆一下大学四年我在专业上的学习经历。</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div id="overlay" class="overlay">
+        <div class="overlay-content">
+            <img src="WeChat.png" alt="">
+            <h2>联系</h2>
+            <p>电话: 15717721062</p>
+            <p>邮箱: ddmielgo@gmail.com</p>
+
+            <button id="close-overlay">关闭</button>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const contactButton = document.getElementById('contact');
+            const overlay = document.getElementById('overlay');
+            const closeOverlayButton = document.getElementById('close-overlay');
+            const content = document.querySelector('.content');
+            const page1Bottom = document.getElementById('page1Bottom');
+
+            contactButton.addEventListener('click', function () {
+                overlay.classList.add('active');
+                content.classList.add('blur');
+                page1Bottom.classList.add('blur');
+            });
+
+            closeOverlayButton.addEventListener('click', function () {
+                overlay.querySelector('.overlay-content').style.animation = 'slideUp 0.3s ease';
+                setTimeout(() => {
+                    overlay.classList.remove('active');
+                    content.classList.remove('blur');
+                    page1Bottom.classList.remove('blur');
+                    overlay.querySelector('.overlay-content').style.animation = 'slideDown 0.3s ease';
+                }, 300);
+            });
+
+            overlay.addEventListener('click', function (event) {
+                if (event.target === overlay) {
+                    overlay.querySelector('.overlay-content').style.animation = 'slideUp 0.3s ease';
+                    setTimeout(() => {
+                        overlay.classList.remove('active');
+                        content.classList.remove('blur');
+                        page1Bottom.classList.remove('blur');
+                        overlay.querySelector('.overlay-content').style.animation = 'slideDown 0.3s ease';
+                    }, 300);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+body {
+  padding: 0 30px;
+  padding-top: 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+a {
+  text-decoration: none; /* 移除下划线 */
+  color: inherit; /* 继承父元素的颜色 */
+  transition: color 0.3s;
+}
+a:hover {
+  color: #6a6854;
+}
+.head {
+  position: fixed; /* 固定在页面顶端 */
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 900;
+  font-size: 1.1vw;
+  max-width: 96%;
+  min-width: 96%;
+  z-index: 1000; /* 确保在其他内容之上 */
+  padding: 10px 40px; /* 添加内边距 */
+  background-color: #ffffff00;
+  /* background-color: rgba(255, 255, 255, 0.8);  */
+  backdrop-filter: blur(10px); /* 添加毛玻璃效果 */
+  -webkit-backdrop-filter: blur(10px); /* 兼容 WebKit 浏览器 */
+  /* box-shadow: 0 0.5px 0px rgba(0, 0, 0, 0.1);  */
+}
+.HL {
+  flex: 1;
+  text-align: left;
+}
+
+.HC {
+  flex: 1;
+  text-align: center;
+}
+
+.HR {
+  flex: 1;
+  text-align: right;
+}
+.wellcome {
+  margin: 10% 0;
+}
+.article {
+  display: flex;
+  gap: 3%;
+  align-items: stretch;
+}
+.time {
+  font-size: 0.8vw;
+  color: rgb(116, 116, 116);
+  /* margin-top: -5%; */
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+h2 {
+  margin: 0%;
+}
+img {
+  width: 18vw;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: flex-end;
+  align-items: flex-start;
+  z-index: 2000;
+}
+
+.overlay.active {
+  display: flex;
+}
+.overlay-content {
+  width: 14vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-start; */
+  align-items: right;
+  background: white;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  animation: slideDown 0.3s ease;
+  border-radius: 3px;
+  gap: 5%;
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+.overlay-content p,
+button {
+  font-size: 1vw;
+  margin: 0;
+  padding: 0;
+}
+.overlay-content h2 {
+  margin-top: 5%;
+  margin-bottom: 10%;
+}
+.blur {
+  filter: blur(5px);
+  pointer-events: none;
+}
+.HR:hover {
+  color: #6a6854;
+  cursor: pointer;
+}
+.overlay img {
+  width: 14vw;
+  height: auto;
+  align-self: center;
+}
+#close-overlay {
+  border: 0.5px solid #6a6854;
+  background-color: #ff000000;
+  border-radius: 2px;
+  margin-top: 7%;
+}
